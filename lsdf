@@ -1,0 +1,8 @@
+echo
+echo
+echo 
+echo 'Directories are:'
+ls -F | grep / | column
+echo
+echo 'Files are:'
+ls -F| grep -v /| column

@@ -1,0 +1,17 @@
+echo 'id output:'
+id
+echo
+echo 'who entry:'
+who | grep $USER 
+echo
+echo 'present directory:'
+pwd
+echo
+echo 'current system:'
+hostname
+echo
+echo 'current processes:'
+ps aux
+echo 'search path:'
+echo $PATH
+

@@ -1,0 +1,8 @@
+tr -d '?."!:,();' < manywords \
+| tr 'A-Z' 'a-z' \
+| tr ' ' '\n' \
+| tr '\t' '\n\n' \
+| sed '/^$/d' \
+| sort | uniq -c \
+| sort -rn \
+| tee words.out | wc -l
