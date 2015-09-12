@@ -1,0 +1,13 @@
+aa=0
+clear
+while [ $aa -le 10 ]
+do
+echo $aa
+sleep 1
+((aa=$aa+1))
+done
+echo "Th Th Th That's All Folks"
+echo
+echo
+sleep 1
+
