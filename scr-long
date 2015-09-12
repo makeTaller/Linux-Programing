@@ -1,0 +1,10 @@
+echo hi $USER 1
+sleep 10
+echo hi $USER 2
+sleep 15
+echo hi $USER 3
+sleep 15
+echo hi $USER 4
+sleep 10
+echo hi $USER 5
+
