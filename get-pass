@@ -1,0 +1,21 @@
+clear
+echo "1) grep $USER /etc/passwd"
+echo "2) cat passwd | grep $USER"
+echo "3) who | sort | awk '{print $1}' | uniq -c"
+echo "What command do you want to run?"
+echo Select 1 2 or 3
+read choice
+echo you selected number $choice
+
+case $choice in
+1)
+grep $USER /etc/passwd
+;;
+2)
+cat /etc/passwd | grep $USER
+;;
+3)
+who | sort | awk '{print $1}' | uniq -c
+;;
+esac
+

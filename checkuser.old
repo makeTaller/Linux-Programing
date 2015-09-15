@@ -1,0 +1,8 @@
+who | grep $USER | wc -l
+echo The number of times you are currently logged on is:
+who | grep $USER | wc -l
+echo Please enter the login name of the user you want to  check
+read name
+echo The number of times $name is  currently logged on is:
+who | grep $name | wc -l
+

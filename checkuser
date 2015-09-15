@@ -1,0 +1,9 @@
+if [ "$1" ]
+then
+name=$1
+else
+echo Please enter a login name to check
+read name
+fi
+echo The number of times $name you are currently logged on is:
+who | grep $name | wc -l
