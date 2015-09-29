@@ -1,0 +1,28 @@
+#!/bin/bash
+#################### User enters 2 or more arguments #################
+if [ "$2" ]
+then 
+	cat <<EOH-A
+				You entered more than one argument. Please enter:
+				groupon or groupon loginid
+EOH-A
+		exit 1
+
+################# User enters 1 argrument ############################
+elif [ "$1" ]
+then
+		person=$1
+################ User enters 0 argruments ############################
+else 
+		person=$USER
+fi
+################## Main Program ##########################
+echo
+set +o noclobber
+echo Members of the same group as $person logged on are:
+grpnum=$(awk -F: '$1 == "'$1'" {print $4}' /etc/passwd)
+awk -F: '$4 =='$grpnum' {print  $1}' /etc/passwd\
+| sort > grplist 
+who | awk '{print $1}' | sort > loglist \
+| comm -12 - grplist 
+rm grplist 
