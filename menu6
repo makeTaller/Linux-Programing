@@ -1,0 +1,35 @@
+#!/bin/bash
+leave=no
+while [ $leave = no ]
+do
+clear
+cat <<++
+MAIN MENU
+1)    Print current working directory
+2)    List all files in current directory
+3)    Print today's date and time
+4)    Display contents of a file
+x)    Exit
+++
+echo Please enter your selection $USER:
+read selection
+case $selection in
+1) pwd ;;
+2) ls -l ;;
+3) date ;;
+4) echo "Enter a filename"
+   read fname
+   if [ -r $fname ]
+   then
+      more $fname
+   else
+      echo "menu: Cannot acces file $fname"
+   fi
+   ;;
+q|Q|e|E|x|X) leave=yes ;;
+*) echo "Invalid choice. Try again.";;
+esac
+echo -n "Press Enter to continue "
+read hold
+done
+exit 0

@@ -1,0 +1,7 @@
+BEGIN {
+RS="$"
+FS=":"
+}
+{
+print "NR is " NR, $1, $2
+}

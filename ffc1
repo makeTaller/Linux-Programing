@@ -1,0 +1,9 @@
+echo
+echo 
+echo ************System Report***************
+dmesg \
+| head -15
+
+echo ************EOF****************
+dmesg \
+| tail -15

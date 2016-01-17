@@ -1,0 +1,19 @@
+#!/bin/bash
+echo 
+cat <<EOH This is a dmesg (before and after command) that commpares before
+          messeges to observe device additions.
+EOH
+
+dmesg |tail | tee dmesg1.d
+dmesg |tail | tee dmesg2.d
+echo 
+echo 
+sort dmesg1.d > dmesg1.s
+
+echo 
+sort dmesg2.d > dmesg2.s
+
+
+	join -t: dmesg1.s dmesg2.s \
+| uniq -c -
+

@@ -1,0 +1,4 @@
+#!/bin/bash
+echo The user group is for the login $1 is:
+awk -F: '$1 =="'$1'" {print  $1, $4}' /etc/passwd
+

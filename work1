@@ -1,0 +1,13 @@
+echo
+sort staff > staff.s
+sort tasks > tasks.s
+echo FILE: staff.s
+cat staff.s
+echo
+echo FILE: tasks.s
+cat tasks.s
+echo
+echo JOINED:
+join -t: staff.s tasks.s
+rm tasks.s staff.s
+

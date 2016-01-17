@@ -1,0 +1,11 @@
+
+echo
+sort staff > staff.s
+sort tasks > tasks.s
+join -t: -o 1.2 2.2 2.3 staff.s tasks.s \
+| sort -t: +0 -1 +2 -3 \
+| sed 's/:/     /' \
+| sed 's/:x/  ***COMPLETED***   /' \
+| tee all.tasks | grep -v '**CO' 
+rm tasks.s staff.s
+

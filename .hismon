@@ -1,0 +1,6 @@
+echo
+echo
+echo '********' $USER 'History **********'
+history
+date   \
+| tee .hist.log

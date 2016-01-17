@@ -1,0 +1,10 @@
+echo hello $USER
+echo 'The contents of variable "$1" is'    "$1"
+echo 'The contents of variable "$2" is'    "$2"
+echo 'The contents of variable "$3"  is'    "$3"
+echo 'The contents of variable "$0" is'    "$0"
+echo 'The contents of variable $* is'    "$*"
+echo 'The contents of variable $# is'    "$#"
+echo 'The contents of variable $$ is' "$$"
+echo 'The contents of variable "$1" is' "1"
+

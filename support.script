@@ -1,0 +1,3 @@
+sort -n support.contrib -o support.contrib
+sort -n support.names -o support.names
+join support.names support.contrib

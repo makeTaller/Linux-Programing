@@ -1,0 +1,18 @@
+
+echo
+sort staff > staff.s
+sort tasks > tasks.s
+echo FILE: staff.s
+echo
+cat staff.s
+echo
+echo FILE: tasks.s
+cat tasks.s
+echo
+echo JOINED:
+echo
+join -t: -o 1.2 2.2 2.3 staff.s tasks.s
+sort -t: +0 -1 +2 -3 \
+| sed 's/:/  /'
+rm tasks.s staff.s
+

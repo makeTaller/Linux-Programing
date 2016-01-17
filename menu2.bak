@@ -1,0 +1,15 @@
+#!/bin/bash
+cat <<++
+MAIN MENU
+1)    Print current working directory
+2)    List all files in current directory
+3)    Print today's date and time
+++
+echo Please enter your selection $USER:
+read selection
+case $selection in
+1) pwd ;;
+2) ls -l ;;
+3) date ;;
+esac
+

@@ -1,0 +1,5 @@
+#!/bin/bash
+for name 
+do
+	grep -i "$name" phone.list
+done | sort -u

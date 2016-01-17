@@ -1,0 +1,3 @@
+echo  Your entry in the password file is:
+awk -F: '$1 =="'$USER'" {print $1, $4}' /etc/passwd
+
